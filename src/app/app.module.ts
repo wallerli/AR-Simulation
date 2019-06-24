@@ -10,6 +10,11 @@ import { HttpClientModule } from '@angular/common/http';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { FormsModule } from '@angular/forms';
 
+import { RoundService } from './round/round.service'
+
+import { AngularFireModule } from '@angular/fire'
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+
 import {
   MdcButtonModule,
   MdcFabModule,
@@ -18,6 +23,7 @@ import {
   MdcTopAppBarModule
 } from '@angular-mdc/web';
 import { RoundComponent } from './round/round.component';
+import { fromEventPattern } from 'rxjs';
 
 const MDC_MODULES: any[] = [
   MdcButtonModule,
@@ -40,8 +46,10 @@ const MDC_MODULES: any[] = [
     FlexLayoutModule,
     FormsModule,
     MDC_MODULES,
+    AngularFireModule.initializeApp(environment.firebase, 'BeeAR'),
+    AngularFirestoreModule
   ],
-  providers: [],
+  providers: [RoundService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
