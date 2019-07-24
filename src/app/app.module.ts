@@ -22,6 +22,8 @@ import {
   MdcMenuModule,
   MdcTopAppBarModule
 } from '@angular-mdc/web';
+import { ArViewComponent } from './ar-view/ar-view.component';
+import { PlayRoundComponent } from './play-round/play-round.component';
 import { RoundComponent } from './round/round.component';
 import { fromEventPattern } from 'rxjs';
 
@@ -35,6 +37,9 @@ const MDC_MODULES: any[] = [
 
 @NgModule({
   declarations: [
+    AppComponent,
+    ArViewComponent,
+    PlayRoundComponent
     AppComponent,
     RoundComponent
   ],
