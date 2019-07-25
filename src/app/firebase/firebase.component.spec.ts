@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { RoundComponent } from './round.component';
+import { FirebaseComponent } from './firebase.component';
 
-describe('RoundComponent', () => {
-  let component: RoundComponent;
-  let fixture: ComponentFixture<RoundComponent>;
+describe('FirebaseComponent', () => {
+  let component: FirebaseComponent;
+  let fixture: ComponentFixture<FirebaseComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ RoundComponent ]
+      declarations: [ FirebaseComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(RoundComponent);
+    fixture = TestBed.createComponent(FirebaseComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

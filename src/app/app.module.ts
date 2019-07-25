@@ -10,7 +10,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { FormsModule } from '@angular/forms';
 
-import { RoundService } from './round/round.service'
+import { FirebaseService } from './firebase/firebase.service'
 
 import { AngularFireModule } from '@angular/fire'
 import { AngularFirestoreModule } from '@angular/fire/firestore';
@@ -24,7 +24,7 @@ import {
 } from '@angular-mdc/web';
 import { ArViewComponent } from './ar-view/ar-view.component';
 import { PlayRoundComponent } from './play-round/play-round.component';
-import { RoundComponent } from './round/round.component';
+// import { RoundComponent } from './round/round.component';
 import { fromEventPattern } from 'rxjs';
 
 const MDC_MODULES: any[] = [
@@ -40,8 +40,6 @@ const MDC_MODULES: any[] = [
     AppComponent,
     ArViewComponent,
     PlayRoundComponent
-    AppComponent,
-    RoundComponent
   ],
   imports: [
     BrowserModule,
@@ -54,7 +52,7 @@ const MDC_MODULES: any[] = [
     AngularFireModule.initializeApp(environment.firebase, 'BeeAR'),
     AngularFirestoreModule
   ],
-  providers: [RoundService],
+  providers: [FirebaseService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

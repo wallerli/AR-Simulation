@@ -3,6 +3,9 @@ import * as THREE from 'three';
 import * as THREEAR from 'threear';
 import Info from 'info-monitor';
 
+import { FirebaseService } from '../firebase/firebase.service';
+import { Bee } from '../firebase-models/bee';
+
 /**
  * A barcode marker for AR
  */
@@ -64,10 +67,11 @@ export class ArViewComponent implements OnInit {
   monitor2: Info;
   monitor3: Info;
   
-  constructor() {
+  constructor(private firebaseServ: FirebaseService) {
     
   }
-  
+
+  bees: Bee[];
 
   // Provides a reference for the canvas element
   private get canvas(): HTMLCanvasElement {
@@ -91,6 +95,10 @@ export class ArViewComponent implements OnInit {
   private monitorContainerRef: ElementRef;
 
   ngOnInit() {
+    this.firebaseServ.getFirebaseInfo().subscribe(bees => {
+      console.log(bees);
+      this.bees = bees;
+    });
   }
   
   ngAfterViewInit() {

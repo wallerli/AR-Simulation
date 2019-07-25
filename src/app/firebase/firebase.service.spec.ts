@@ -1,12 +1,12 @@
 import { TestBed } from '@angular/core/testing';
 
-import { RoundService } from './round.service';
+import { FirebaseService } from './firebase.service';
 
-describe('RoundService', () => {
+describe('FirebaseService', () => {
   beforeEach(() => TestBed.configureTestingModule({}));
 
   it('should be created', () => {
-    const service: RoundService = TestBed.get(RoundService);
+    const service: FirebaseService = TestBed.get(FirebaseService);
     expect(service).toBeTruthy();
   });
 });

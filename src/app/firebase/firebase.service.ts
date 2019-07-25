@@ -1,12 +1,12 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/firestore';
-import { Bee } from 'src/app/models/bee';
+import { Bee } from 'src/app/firebase-models/bee';
 
 @Injectable({
   providedIn: 'root'
 })
-export class RoundService {
+export class FirebaseService {
   beesCollection: AngularFirestoreCollection<Bee>;
   bees: Observable<Bee[]>;
 
@@ -14,7 +14,7 @@ export class RoundService {
     this.bees = this.afs.collection('bees').valueChanges();
   }
 
-  getRoundInfo() {
+  getFirebaseInfo() {
     return this.bees;
   }
 }
