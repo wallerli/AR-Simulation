@@ -17,10 +17,10 @@ export class PlayRoundComponent implements OnInit {
   constructor() { }
 
   testMarkers : Marker[] = [
-    {name:"sunflower", barcodeValue:1, imgPath:"assets/images/1000w-8bit/flowers/sunflower.png"},
-    {name:"black raspberry", barcodeValue:2, imgPath:"assets/images/1000w-8bit/flowers/black raspberry.png"},
-    {name:"rudbeckia hirta", barcodeValue:3, imgPath:"assets/images/1000w-8bit/flowers/rudbeckia hirta.png"},
-    {name:"solidago rigida", barcodeValue:4, imgPath:"assets/images/1000w-8bit/flowers/solidago rigida.png"}
+    {name:"sunflower", barcodeValue:1, imgPath:"assets/images/square/flowers/sunflower@0,5x.png"},
+    {name:"black raspberry", barcodeValue:2, imgPath:"assets/images/square/flowers/black raspberry.png"},
+    {name:"rudbeckia hirta", barcodeValue:3, imgPath:"assets/images/square/flowers/rudbeckia hirta.png"},
+    {name:"solidago rigida", barcodeValue:4, imgPath:"assets/images/square/flowers/solidago rigida.png"}
   ]
 
   ngOnInit() {

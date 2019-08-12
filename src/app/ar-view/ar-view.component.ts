@@ -251,7 +251,7 @@ export class ArViewComponent implements OnInit {
       this.scene.add(markerGroup);
       
       //Create the geometry the texture will be placed on
-      let geometry1 = new THREE.PlaneBufferGeometry(1,1, 4,4);
+      let geometry1 = new THREE.PlaneBufferGeometry(3,3, 1,1);
 
       //Create the basic image texture
       let loader = new THREE.TextureLoader();
@@ -263,7 +263,7 @@ export class ArViewComponent implements OnInit {
 
       //Rotate the mesh so the image is flat on the marker
       mesh1.rotation.x = -Math.PI/2;
-      
+
       //Add the mesh to the group
       markerGroup.add( mesh1 );
       
