@@ -1,6 +1,18 @@
-<div *ngIf="this.roundReady">
-  <button mdc-button raised (click)="this.round.interactButton.onClick()" *ngIf="this.round.interactButton && this.round.interactButton.display">{{this.round.interactButton.text}}</button>
-  <button mdc-button (click)="this.testMarkerChange()">test add marker</button>
+<app-ar-view *ngIf="this.roundReady" #arview [markers]="this.round.markers" [debug]="true" (onMarkerStates)="this.onMarkerState($event)" class="ar-view"></app-ar-view>
 
-  <app-ar-view #arview [markers]="this.round.markers" [debug]="true" (onMarkerStates)="this.onMarkerState($event)"></app-ar-view>
+<div *ngIf="this.roundReady" fxLayout="column" fxLayoutAlign="space-around center" class="round-overlay">
+
+  <div class="text-container">
+      <span style="color: white;">This is a test</span>
+  </div>
+  <div class="center-container">
+    
+  </div>
+  <div class="interact-button-container" >
+    <button mdc-fab extended fluid class="interact-button" (click)="this.round.interactButton.onClick()" *ngIf="true || this.round.interactButton && this.round.interactButton.display">{{this.round.interactButton.text}}</button>
+  </div>
+
 </div>
+
+
+  <img src="assets/images/1000w-8bit/bees/rusty patch bumblebee.png" class="bee-img">

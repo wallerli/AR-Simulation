@@ -1,0 +1,45 @@
+.interact-button-container {
+
+    //position: absolute;
+    //bottom: 0;
+    width: 50%;
+}
+
+.interact-button {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.round-overlay {
+    z-index: 1;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+.ar-view {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    margin: 0;
+}
+
+.center-container {
+    //height: 10%;
+}
+
+
+.bee-img {
+    z-index: 0;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%, 30%);
+    margin: 0 auto;
+    //width: 70%;
+    height: 50%;
+}
