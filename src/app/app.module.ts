@@ -38,6 +38,7 @@ const MDC_MODULES: any[] = [
     PlayRoundComponent,
     AnimationDialogComponent
   ],
+  entryComponents: [AnimationDialogComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

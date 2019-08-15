@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Round, Marker } from '../rounds/round';
 import { ExampleRound } from "../rounds/example.round";
 import { MarkerState } from '../ar-view/ar-view.component';
+import { MdcDialog } from '@angular-mdc/web';
+import { AnimationDialogComponent } from '../animation-dialog/animation-dialog.component';
 
 @Component({
   selector: 'app-play-round',
@@ -14,7 +16,7 @@ export class PlayRoundComponent implements OnInit {
 
   roundReady: boolean;
 
-  constructor() { }
+  constructor(public dialog: MdcDialog) { }
 
   testMarkers : Marker[] = [
     {name:"sunflower", barcodeValue:1, imgPath:"assets/images/1000w-8bit/flowers/sunflower.png"},
@@ -42,6 +44,8 @@ export class PlayRoundComponent implements OnInit {
     newmarkers.push({name:"test marker", barcodeValue:5, imgPath:"assets/icons/icon-512x512.png"});
     newmarkers[1] = {name:"test marker 1", barcodeValue:2, imgPath:"assets/icons/icon-512x512.png"};
     this.round.markers = newmarkers; 
+
+    const dialogRef = this.dialog.open(AnimationDialogComponent)
   }
 
 

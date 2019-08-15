@@ -4,10 +4,11 @@
 }
 
 .bee {
+    position: absolute;
     width: 250px;
     height: 250px;
-    animation-name:moveup;
-    animation-duration: 3s;
+    animation-name: moveup;
+    animation-duration: 10s;
 }  
 
 .animation-content {
