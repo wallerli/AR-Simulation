@@ -1,0 +1,15 @@
+@keyframes moveup {
+    from {bottom: 0px;}
+    to {bottom: 200px;}
+}
+
+.bee {
+    width: 250px;
+    height: 250px;
+    animation-name:moveup;
+    animation-duration: 3s;
+}  
+
+.animation-content {
+    height: 700px;
+}

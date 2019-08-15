@@ -1,5 +1,7 @@
 import { Round, Marker, Button } from './round';
 import { MarkerState } from '../ar-view/ar-view.component';
+import { AnimationDialogComponent } from '../animation-dialog/animation-dialog.component';
+import { MdcDialog } from '@angular-mdc/web';
 
 export class ExampleRound implements Round{
 
@@ -13,7 +15,7 @@ export class ExampleRound implements Round{
         onClick: this.buttonClick
     };
 
-    constructor(name: string, markers: Marker[]) {
+    constructor(name: string, markers: Marker[], public dialog: MdcDialog) {
         this.name = name;
         this.markers = markers;
     }
@@ -32,5 +34,6 @@ export class ExampleRound implements Round{
 
     buttonClick() {
         console.log("button clicked");
+        const dialogRef = this.dialog.open(AnimationDialogComponent)
     }
 }
