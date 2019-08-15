@@ -15,7 +15,8 @@ import {
   MdcFabModule,
   MdcIconModule,
   MdcMenuModule,
-  MdcTopAppBarModule
+  MdcTopAppBarModule,
+  MdcDialogModule,
 } from '@angular-mdc/web';
 import { ArViewComponent } from './ar-view/ar-view.component';
 import { PlayRoundComponent } from './play-round/play-round.component';
@@ -26,7 +27,8 @@ const MDC_MODULES: any[] = [
   MdcFabModule,
   MdcIconModule,
   MdcMenuModule,
-  MdcTopAppBarModule
+  MdcTopAppBarModule,
+  MdcDialogModule
 ];
 
 @NgModule({
